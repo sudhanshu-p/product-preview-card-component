@@ -1,0 +1,119 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(30, 38%, 92%);
+    /* background-color: hsl(158, 36%, 37%); */
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+.product-img {
+    background-image: url("./images/image-product-mobile.jpg");
+    aspect-ratio: 686 / 480;
+    width: 375px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5em 0.5em 0 0;
+    /* overflow: hidden; */
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    padding: 8%; 
+}
+
+.product-details > * {
+    padding: 2%;
+}
+
+.product-type {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-name {
+    font-family: 'Fraunces', serif;
+    color: black;
+    font-size: 30px;
+}
+
+.price {
+    width: 69%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.disc-price {
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-size: xx-large;
+}
+
+.og-price {
+    text-decoration: line-through;
+    font-weight: 100;
+    font-size: small;
+}
+
+.cart {
+    background-color: hsl(158, 36%, 37%);
+    border-radius: 0.5em;
+    outline: none;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart > * {
+    padding-right: 5%;
+}
+
+@media (min-width: 1000px) {
+    .card-container {
+        flex-direction: row;
+    }
+
+    .product-img {
+        background-image: url("./images/image-product-desktop.jpg");
+        border-radius: 0.5em 0em 0 0.5em;
+        aspect-ratio: 600 / 900;
+        height: 100%;
+    }
+
+    .card-container {
+        width: 50rem;
+        aspect-ratio: 7 / 5;
+        font-size: 18px;
+    }
+
+    .product-details {
+        justify-content: space-around;
+    }
+
+    .price {
+        width: 80%;
+    }
+}
